@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mariomz.e_plan.activity.TomatoGuide1Activity">
+
+    <include layout="@layout/titlebar_tomato"
+             android:id="@+id/titlebar"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_text"
+        android:layout_below="@+id/titlebar"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_grid"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_title_guide"
+            android:layout_below="@+id/ll_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哪个任务是相对重要的?"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:paddingTop="10dp"
+            android:id="@+id/tv_title_content"
+            android:layout_below="@+id/tv_title_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用番茄钟的第二步是按照恰当地优先级完成工作。因此在开始工作之前，我们先选定一个最为重要的任务吧。"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingLeft="12dp"
+        android:paddingTop="10dp"
+        android:paddingRight="12dp"
+        android:orientation="vertical"
+        android:layout_below="@id/rl_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom">
+
+        <TextView
+            android:gravity="center"
+            android:background="#44000000"
+            android:text="选择一个较为重要的任务"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ListView
+            android:id="@+id/lv_planlist_to_important"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_bottom">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_below"
+            android:text="至少选择一个任务继续下一步"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/bt_next"
+            android:text="下一步"
+            android:background="#44000000"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
